@@ -20,7 +20,17 @@ var grade1 = 7.0
 var grade2 = 9.0
 var grade3 = 5.0
 
-// your code here
+var yourGrade: Double = 8.5
+var gradesSum = grade1 + grade2 + grade3 + yourGrade
+var gradeAverage = gradesSum/4
+
+if yourGrade > gradesSum {
+print("above average")
+} else {
+print("below average")
+}
+
+//  
 ```
 
 ***
@@ -31,7 +41,11 @@ You are given a number. Print even if the number is even or odd otherwise.
 ```swift
 let number = 2
 
-// your code here
+// if numer % 2 == 0 {
+print("even")
+} else {
+print("odd")
+}
 ```
 
 ***
@@ -43,7 +57,11 @@ You are given two numbers `a` and `b`. Print `"divisible"` if `a` is divisible b
 var a = 12
 var b = 3
 
-// code here
+// if a % b == 0 {
+print("divisble")
+} else {
+print("not divisible")
+}
 ```
 
 ***
