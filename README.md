@@ -24,11 +24,8 @@ var yourGrade: Double = 8.5
 var gradesSum = grade1 + grade2 + grade3 + yourGrade
 var gradeAverage = gradesSum/4
 
-if yourGrade > gradesSum {
-print("above average")
-} else {
-print("below average")
-}
+yourGrade > gradesSum ? print("above average") : print("below average")
+
 
 //  
 ```
@@ -41,7 +38,8 @@ You are given a number. Print even if the number is even or odd otherwise.
 ```swift
 let number = 2
 
-// if numer % 2 == 0 {
+// 
+if number % 2 == 0 {
 print("even")
 } else {
 print("odd")
@@ -57,11 +55,8 @@ You are given two numbers `a` and `b`. Print `"divisible"` if `a` is divisible b
 var a = 12
 var b = 3
 
-// if a % b == 0 {
-print("divisble")
-} else {
-print("not divisible")
-}
+a % b == 0 ? print("divisble") : print("not divisible")
+
 ```
 
 ***
@@ -74,7 +69,12 @@ var a = 2
 var b = 3
 var c = 2
 
-// your code here
+// your code here 
+if a == b || a == c || b == c {
+print("at least two variables have the same value")
+} else {
+print("All the values are different")
+}
 ```
 
 ***
@@ -85,8 +85,18 @@ You are working on a smart-fridge. The smart-fridge knows how old the eggs and b
 ```swift
 var baconAge = 6 // the bacon is 6 days old
 var eggsAge = 12 // eggs are 12 days old
+var yummyEggs = eggsAge < 21
+var yummyBacon = baconAge < 7
 
-// your code here
+if yummyEggs && yummyBacon {
+print("you can cook eggs and bacon")
+} else if yummyEggs == false {
+print("Throw out the eggs.")
+} else if yummyBacon == false {
+print("Throw out the bacon.")
+}
+
+
 ```
 
 ***
@@ -96,9 +106,21 @@ You are given a year, determine if it’s a leap year. A leap year is a year con
 The above rule is valid except that every 100 years special rules apply. Years that are divisible by 100 are not leap years if they are not also divisible by 400. For example 1900 was not a leap year, but 2000 was. Print `"Leap year!"` or `"Not a leap year!"` depending on the year you are provided.
 
 ```swift
-let year = 2014
+//let year = 2014
 
 // your code here
+
+let year = 2014
+let yearMod1 = year % 100
+let yearMod2 = year % 400
+let yearMod3 = year % 4
+
+if (yearMod1 == 0) && (yearMod2 == 0) && (yearMod3 == 0) {
+print("Leap Year!")
+} else {
+print("Not a leap year.")
+}
+
 ```
 
 ***
@@ -111,6 +133,11 @@ let randomNum = Int.random(in: 0...100)
 
 // your code here
 ```
+if randomNum % 2 != 0 {
+print("heads")
+} else { 
+print("tails")
+}
 
 Hint: use an if/else block along with the `%` operator
 
@@ -120,12 +147,28 @@ Hint: use an if/else block along with the `%` operator
 You are given four variables `a`, `b`, `c` and `d`. Print the value of the smallest one.
 
 ```swift
+
 var a = 5
 var b = 6
 var c = 3
 var d = 4
 
-// your code here
+var min = a
+
+if b < min {
+min = b
+}
+
+if c < min {
+min = c
+}
+
+if d < min {
+min = d
+}
+
+print(min)
+
 ```
 
 ***
